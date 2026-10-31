@@ -2,6 +2,8 @@
   "name": "task-manager-client",
   "version": "0.0.0",
   "scripts": {
+    "e2e": "ng e2e",
+    "e2e:test": "./node_modules/.bin/nightwatch --env 'firefox' --config './nightwatch.conf.js'",
     "ng": "ng",
     "start": "ng serve",
     "build": "ng build",
@@ -28,10 +30,16 @@
     "@angular/build": "^22.2.5",
     "@angular/cli": "^22.2.5",
     "@angular/compiler-cli": "^22.2.4",
+    "@nightwatch/angular": "3.1.1",
+    "@nightwatch/schematics": "^1.2.1",
     "@types/express": "^5.0.1",
+    "@types/nightwatch": "3.0.1",
     "@types/node": "^22.12.0",
+    "geckodriver": "8.0.0",
     "jsdom": "^30.0.0",
+    "nightwatch": "3.16.0",
     "prettier": "^3.8.1",
+    "ts-node": "10.9.2",
     "typescript": "~6.0.2",
     "vitest": "^5.0.0"
   }

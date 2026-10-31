@@ -24,9 +24,7 @@
                 "input": "public"
               }
             ],
-            "styles": [
-              "src/styles.css"
-            ],
+            "styles": ["src/styles.css"],
             "server": "src/main.server.ts",
             "outputMode": "server",
             "security": {
@@ -74,6 +72,20 @@
         },
         "test": {
           "builder": "@angular/build:unit-test"
+        },
+        "nightwatch-run": {
+          "builder": "@nightwatch/schematics:nightwatch",
+          "options": {
+            "devServerTarget": "task-manager-client:serve",
+            "tsConfig": "../nightwatch/tsconfig.e2e.json",
+            "config": "./nightwatch.conf.js",
+            "env": "firefox"
+          },
+          "configurations": {
+            "production": {
+              "devServerTarget": "task-manager-client:serve:production"
+            }
+          }
         }
       }
     }
