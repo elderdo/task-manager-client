@@ -10,6 +10,7 @@ Before starting the development server for the first time, you must generate a l
 
 1. Open PowerShell as an **Administrator**.
 2. Run the setup script:
+
    ```powershell
    .\scripts\Setup-SSL-files.ps1
    ```
