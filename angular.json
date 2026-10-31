@@ -60,6 +60,11 @@
         },
         "serve": {
           "builder": "@angular/build:dev-server",
+          "options": {
+            "port": 4040,
+            "ssl": true,
+            "sslCert": "assets/ssl/localhost.crt"
+          },
           "configurations": {
             "production": {
               "buildTarget": "task-manager-client:build:production"

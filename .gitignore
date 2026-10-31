@@ -42,3 +42,9 @@ __screenshots__/
 # System files
 .DS_Store
 Thumbs.db
+
+# Local SSL Development Certificates
+src/assets/ssl/
+*.crt
+*.pfx
+*.key
